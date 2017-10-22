@@ -1,0 +1,1 @@
+The Files that are modified are syscall_64.tbl, sys.c and syscalls.h. I implemented myXTime.c where I just create the structure variable and pass the structure reference with the number 326 which is the sys call number in the syscall_64.tbl. Syscall.h adds the asmlinkage sys_my_x_time. The implementation is done in sys.c.

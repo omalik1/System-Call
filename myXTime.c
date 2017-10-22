@@ -8,7 +8,7 @@
 
 void main()
 {
-	struct timespec time; //how does this work 
-	syscall(326, &time); //uses the syscall from the syscall table
+	struct timespec time; // Creating structure variable for time spec 
+	syscall(326, &time);  // Passing structure refernce to sys call 326 (myXtime)
 	printf("%ld\n", time.tv_nsec);
 }

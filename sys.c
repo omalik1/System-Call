@@ -2429,7 +2429,10 @@ COMPAT_SYSCALL_DEFINE1(sysinfo, struct compat_sysinfo __user *, info)
 	return 0;
 }
 
-//need to understand system_define1.  The if condition how that access_ok works
+/* 
+   Checks if the user variable is writable. If not then
+   returns with EFAULT else it gets the time.
+*/
 SYSCALL_DEFINE1(my_xtime, struct timespec __user *, get_Time)
 {
 	struct timespec curr_Time = current_kernel_time();
